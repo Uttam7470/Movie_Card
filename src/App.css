@@ -1,42 +1,93 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: 'Amatic SC', cursive;
+  /* font-family: cursive; */
+  line-height: 2;
+}
+
+
+#main{
+  /* background: linear-gradient(rgb(155, 195, 248),rgb(26, 93, 193),rgb(20, 72, 150)); */
+
+  /* background-image: linear-gradient(135deg, #00ffff, #ff00ff); */
+  background-image: linear-gradient(to right, #3498db, #2ecc71); 
+  height: 100%;
+  padding-bottom: 1rem;
+}
+
+
+#card{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 4rem auto;
+  width: 65vw;
+  background-image: linear-gradient(135deg, #00ffff, #ff00ff);
+  /* background-image: linear-gradient(to right, #3498db, #2ecc71);  */
+  color: white;
+  border-radius: 10px;
   padding: 2rem;
+  justify-content: space-between;
+  /* border: 2px solid white; */
+  box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+}
+
+h1{
+  padding-top: 1rem;
   text-align: center;
+  text-decoration: underline;
+  /* color:rgb(14, 14, 100); */
+  /* text-shadow: 2px 3px rgb(26, 93, 193); */
+  /* background-image: linear-gradient(135deg, #00ffff, #ff00ff); */
+  font-family:'Amatic SC', cursive ;
+  font-size: 3.5rem;
+  font-weight: 600;
+  /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+#card #image{
+  width: 18vw;
+  height: 38vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#card #image img{
+  width: 70%;
+  height: 90%;
+  border-radius: 10px;
+  /* padding: 0rem 2rem; */
+  /* border-radius: ; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+#card #content{
+  width: 40vw;
+  /* margin-left: 4rem; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.card {
-  padding: 2em;
+#card #image img:hover{
+   transform: scale(1.1);
 }
-
-.read-the-docs {
-  color: #888;
+#card #content h2, p{
+  /* color: yellow; */
+  color: black;
+}
+#content .para{
+  padding: 0px 5px;
+  border: 1px solid;
+  display: inline-block;
+  width: 70px;
+  text-align: center;
+  
+}
+.flex{
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }

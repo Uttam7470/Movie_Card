@@ -1,35 +1,40 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import data from "./Data";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+
+      <div id="main">
+        <h1>Movie Cards</h1>
+        {data.map((movie, index) => {
+          return (
+            <div id="card" key={index}>
+  
+              <div id="image">
+                <img src={movie.image}></img>
+              </div>
+              <div id="content">
+                <h2>{movie.title}</h2>
+                <p>
+                  {movie.year} , <b>{movie.director}</b>
+                </p>
+                {/* <p>, </p> */}
+                <div className="flex">
+                  <p className="para">{movie.duration} </p>
+                  <p>, {movie.type}</p>
+                </div>
+
+                <p>{movie.summary}</p>
+              </div>
+             
+            </div>
+            
+          );
+          
+        })}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+
+  );
 }
 
-export default App
+export default App;
